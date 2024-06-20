@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'fonts';
+
+html,
+body {
+  position: relative;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+body {
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+p,h2,h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

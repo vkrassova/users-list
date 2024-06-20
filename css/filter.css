@@ -1,0 +1,25 @@
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 10px;
+    color: var(--hit-gray);
+}
+
+.filter__button {
+    display: inline;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter__button:hover {
+    color: var(--emperor-color);
+}
+
+.filter__button.active {
+    color: var(--emperor-color);
+    border-bottom: dashed var(--emperor-color);
+}

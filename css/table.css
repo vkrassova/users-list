@@ -1,0 +1,83 @@
+.table {
+    display: flex;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table__head {
+    font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--hit-gray);
+}
+
+.table__head th {
+    padding-top: 16px;
+    padding-bottom: 22px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.table__cell {
+    padding: 0;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    border: 1px solid var(--background-color);
+    border-right-width: 0;
+    border-left-width: 0;
+    font-size: 12px;
+    color: var(--silver-color);
+}
+
+.table__cell:last-child {
+    cursor: pointer;
+}
+
+.table__cell-close {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    padding: 5px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNEwyMCAyMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNNCAyMEwyMCA0IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.table__cell--name {
+    font-weight: 600;
+    color: var(--blue-color);
+}
+
+.table__pagination {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.table__pagination-item {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    padding: 5px;
+    font-size: 12px;
+
+    color: var(--hit-gray);
+
+    cursor: pointer;
+}
+
+.table__pagination-item.active {
+    color: var(--blue-color);
+}

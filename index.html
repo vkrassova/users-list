@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User List</title>
+  <script type="module" crossorigin src="./assets/index-CUBUXpHV.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C3Oat_Eh.css">
+</head>
+
+<body>
+  <main class="users">
+    <div class="users__container">
+      <h1 class="users__title">Список пользователей</h1>
+
+      <div class="users__search">
+        <label class="users__field">
+          <input placeholder="Поиск по имени или e-mail" class="search__input" />
+        </label>
+
+        <a class="users__search-clear js-clear">Очистить фильтр</a>
+      </div>
+
+      <div class="filter users__filter">
+        <p>Сортировка:</p>
+        <a class="filter__button filter__reg">
+          Дата регистрации
+        </a>
+        <a class="filter__button filter__rating">
+          Рейтинг
+        </a>
+      </div>
+
+      <div class="users__table table">
+        <table>
+          <thead class="table__head">
+            <tr>
+              <th>Имя пользователя</th>
+              <th>E-mail</th>
+              <th>Дата регистрации</th>
+              <th>Рейтинг</th>
+            </tr>
+          </thead>
+          <tbody class="table__content"></tbody>
+        </table>
+      </div>
+
+      <ul class="table__pagination"></ul>
+    </div>
+
+    <section class="popup">
+      <div class="popup__container">
+        <div class="popup__content">
+          <p class="popup__text">
+            Вы уверены, что хотите удалить пользователя?
+          </p>
+          <div class="popup__buttons">
+            <button class="button popup__button popup__button--delete js-delete">
+              Да
+            </button>
+            <button class="button popup__button js-close">
+               Нет   
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
