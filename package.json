@@ -1,0 +1,19 @@
+{
+  "name": "user_filter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://vkrassova.github.io/users-list",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"public/**/*.{js,json}\"",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.3.2",
+    "vite": "^5.2.0"
+  }
+}
