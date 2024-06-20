@@ -43,3 +43,29 @@ export const closePopup = (popup) => {
   popup.classList.remove('popup--open')
   document.body.classList.remove('no-scroll')
 }
+
+export const render = (users) =>
+users
+  .map(
+    (user) =>
+      `
+<tr class="table__tr" data-id=${user.id}>
+    <td class="table__cell table__cell--name">
+        <span>${user.username}<span/>
+    </td>
+    <td class="table__cell">
+        ${user.email}
+    </td>
+    <td class="table__cell">
+        ${user.registration_date}
+    </td>
+    <td class="table__cell">
+        ${user.rating}
+    </td>
+    <td class="table__cell">
+      <button class="button table__cell-close" data-id=${user.id}></button>
+    </td>
+</tr>
+`
+  )
+  .join('')

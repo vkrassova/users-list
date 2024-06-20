@@ -23,3 +23,8 @@
     color: var(--emperor-color);
     border-bottom: dashed var(--emperor-color);
 }
+
+.hide {
+    display: none;
+  }
+  

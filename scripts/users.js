@@ -6,6 +6,7 @@ import {
   openPopup,
   ratingSortDecrease,
   regDataSortDecrease,
+  render
 } from './utils/helpers'
 
 const tableContent = document.querySelector('.table__content')
@@ -26,32 +27,6 @@ const main = async () => {
   let sliceUsers = null
   let isFiltered = false
   let sortUsers = []
-
-  const render = (users) =>
-    users
-      .map(
-        (user) =>
-          `
-    <tr class="table__tr" data-id=${user.id}>
-        <td class="table__cell table__cell--name">
-            <span>${user.username}<span/>
-        </td>
-        <td class="table__cell">
-            ${user.email}
-        </td>
-        <td class="table__cell">
-            ${user.registration_date}
-        </td>
-        <td class="table__cell">
-            ${user.rating}
-        </td>
-        <td class="table__cell">
-          <button class="button table__cell-close" data-id=${user.id}></button>
-        </td>
-  </tr>
-    `
-      )
-      .join('')
 
   const clearSearch = () => {
     searchInput.value = ''
@@ -155,6 +130,8 @@ const main = async () => {
             })
           }
 
+          clearFilterBtn.classList.remove('hide')
+
           return filteredUsers && isFiltered
         }
 
@@ -162,6 +139,7 @@ const main = async () => {
           paginationList.innerHTML = ''
           createPagination(users)
           showPage(users, currentPage)
+          clearFilterBtn.classList.add('hide')
         }
       }
     })
@@ -189,6 +167,8 @@ const main = async () => {
     buttonRatingSort.classList.add('active')
     buttonRegSort.classList.remove('active')
 
+    clearFilterBtn.classList.remove('hide')
+
     sortUsers = [...users]
 
     if (isRatingSort == 1) {
@@ -212,6 +192,8 @@ const main = async () => {
     isRegDataSort++
     buttonRatingSort.classList.remove('active')
     buttonRegSort.classList.add('active')
+
+    clearFilterBtn.classList.remove('hide')
 
     sortUsers = [...users]
 
@@ -252,6 +234,9 @@ const main = async () => {
 
     deleteUser(target)
     closePopup(popup)
+    clearFilterBtn.classList.add('hide')
+    buttonRatingSort.classList.remove('active')
+    buttonRegSort.classList.remove('active')
   })
 
   /*  
@@ -273,6 +258,8 @@ const main = async () => {
       showPage(users, currentPage)
 
       isFiltered = false
+
+      clearFilterBtn.classList.add('hide')
 
       isRatingSort = 0
       isRegDataSort = 0
