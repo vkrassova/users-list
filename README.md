@@ -8,5 +8,5 @@
 
 #### `npm run dev`
 
-## [Сссылка на Gihub Page](https://vkrassova.github.io/users-list/index.html)
+## [Ссылка на Gihub Page](https://vkrassova.github.io/users-list/index.html)
 
